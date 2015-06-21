@@ -1,0 +1,230 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\sipclient.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\sipclient.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SIPCLIENT_DIALOG DIALOGEX 0, 0, 579, 387
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "sipclient"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,170,293,66,14
+    PUSHBUTTON      "登录到SIP服务器",IDC_BUTTON_LOGIN,495,297,26,15,NOT WS_VISIBLE
+    PUSHBUTTON      "登出",IDC_BUTTON_LOGOUT,496,311,26,14,NOT WS_VISIBLE
+    LTEXT           "对方用户名:",IDC_STATIC,30,236,45,12
+    EDITTEXT        IDC_EDIT_USER2,93,234,105,14,ES_AUTOHSCROLL
+    GROUPBOX        "主叫方(客户端):",IDC_STATIC,6,1,263,278
+    PUSHBUTTON      "呼叫",IDC_BUTTON_CALL,26,257,66,14
+    PUSHBUTTON      "挂断",IDC_BUTTON_HUNGUP,94,257,66,14
+    LTEXT           "主叫方用户名:",IDC_STATIC,292,227,45,8
+    EDITTEXT        IDC_EDIT_USER3,290,241,115,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "被叫方(sip代理，连接摄像机一方):",IDC_STATIC,277,1,257,279
+    PUSHBUTTON      "接听",IDC_BUTTON_ANSWER,313,261,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "拒绝/挂断",IDC_BUTTON_HUNGUP2,372,262,50,14,NOT WS_VISIBLE | WS_DISABLED
+    GROUPBOX        "接收SIP的视频",IDC_STATIC_VIDEO1,13,14,242,186
+    GROUPBOX        "直接看摄像机视频",IDC_STATIC,283,14,243,188
+    GROUPBOX        "系统",IDC_STATIC,7,283,529,99
+    EDITTEXT        IDC_EDIT_LOG,25,314,504,62,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "发送消息",IDC_BUTTON_SEND,217,249,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "连接摄像机",IDC_BUTTON_RTSP_START,413,240,55,14
+    PUSHBUTTON      "断开摄像机",IDC_BUTTON_RTSP_STOP,472,240,56,14
+    PUSHBUTTON      "发送RTP",IDC_BUTTON_SEND_RTP,498,327,26,14,NOT WS_VISIBLE
+    PUSHBUTTON      "设置",IDC_BUTTON_SETUP,25,293,66,14
+    PUSHBUTTON      "初始化",IDC_BUTTON_INIT,95,293,66,14
+    CONTROL         "客户端",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,290,296,37,10
+    CONTROL         "SIP代理",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,354,297,40,10
+    PUSHBUTTON      "获取摄像机列表",IDC_BUTTON_GETLIST,298,33,65,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_HSCROLL | WS_TABSTOP,289,61,211,134
+END
+
+IDD_DLG_VIDEOWND DIALOGEX 0, 0, 316, 185
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_SETUP_DLG DIALOGEX 0, 0, 195, 198
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Setup"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "保存",IDOK,37,171,50,14
+    LTEXT           "用户名:",IDC_STATIC,33,25,29,8
+    EDITTEXT        IDC_EDIT_USER,70,23,90,14,ES_AUTOHSCROLL
+    LTEXT           "口  令:",IDC_STATIC,33,47,29,8
+    EDITTEXT        IDC_EDIT_PW,70,45,90,14,ES_AUTOHSCROLL
+    LTEXT           "服务器:",IDC_STATIC,33,70,29,8
+    EDITTEXT        IDC_EDIT_SERVER,70,68,90,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "取消",IDC_BUTTON_LOGIN,113,171,50,14
+    GROUPBOX        "设置",IDC_STATIC,6,7,183,183
+    LTEXT           "本地SIP端口:",IDC_STATIC,17,93,44,8
+    EDITTEXT        IDC_EDIT_PORT,71,90,90,14,ES_AUTOHSCROLL
+    LTEXT           "本地视频端口:",IDC_STATIC,14,114,44,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PORT2,71,111,90,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "客户端类型:",IDC_STATIC,20,139,38,8
+    COMBOBOX        IDC_COMBO1,69,139,91,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "sipclient.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "sipclient.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SIPCLIENT_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 578
+        BOTTOMMARGIN, 382
+    END
+
+    IDD_SETUP_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 194
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\sipclient.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
